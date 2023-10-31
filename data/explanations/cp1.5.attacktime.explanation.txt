@@ -1,0 +1,1 @@
+The time the attacker first made contact with the victim was identified in the /var/log/auth.log file. The first time "sshd" displayed messages for connections from an external IP was on November 3rd at 18:32:06.

@@ -1,0 +1,1 @@
+In the live image, we went into the "Time and Date Settings" and saw that the Time zone was "America/Chicago". This is CST.

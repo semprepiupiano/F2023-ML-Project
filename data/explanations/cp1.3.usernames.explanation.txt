@@ -1,0 +1,1 @@
+In Autopsy, we navigated through the file system to /home/johnnydoe461/.purple/logs/jabber/johnnydoe461@jwchat.org . The two folders within contained the various conversations the victim had along with the time stamps.
