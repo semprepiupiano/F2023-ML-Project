@@ -1,6 +1,7 @@
 import os
 import requests
 import json
+import pickle
 
 EMAIL= "vnh8du@virginia.edu"
 API_KEY = os.environ["AQS_API_KEY"]
@@ -37,7 +38,8 @@ def get_site_data(state_code, county_code, site_code, bdate, edate, parameters):
 
 def get_aqi_data(state_code, county_code, site_code, bdate, edate):
     URL = f"https://aqs.epa.gov/data/api/dailyData/bySite?email={EMAIL}&key={API_KEY}&bdate={bdate}&edate={edate}&state={state_code}&county={county_code}&site={site_code}"
-    return requests.get(URL).json()['Data']
+    r =  requests.get(URL).json() # ['Data']
+    print(r)
 
 def get_all_site_data(state_code, county_code, site_codes, bdate, edate, parameters):
     pass
@@ -49,7 +51,13 @@ def main():
     bdate = 20200101
     edate = 20201231
     parameters = get_aqi_parameter_codes()
-    print(get_site_data(state_code, county_code, site_code, bdate, edate, parameters))
+    aqi_data = get_aqi_data(state_code, county_code, site_code, bdate, edate)
+    with open("aqi_data.pkl", "wb") as f:
+        pickle.dump(aqi_data, f)
+    site_data = get_site_data(state_code, county_code, site_code, bdate, edate, parameters)
+    with open("site_data.pkl", "wb") as f:
+        pickle.dump(site_data, f)
+    # print(get_site_data(state_code, county_code, site_code, bdate, edate, parameters))
     
 if __name__ == "__main__":
     main()

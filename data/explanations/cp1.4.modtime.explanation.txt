@@ -1,1 +1,0 @@
-The modified time was also listed in the Image/Video tab of Autopsy, under "Modified Time".

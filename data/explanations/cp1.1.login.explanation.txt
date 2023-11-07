@@ -1,1 +1,0 @@
-To obtain this, we cracked the password to the live image and opened a terminal. The victim's login name was displayed before the "@" symbol in the terminal window.

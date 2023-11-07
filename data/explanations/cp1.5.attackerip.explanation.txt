@@ -1,1 +1,0 @@
-The IP address the first attack came from was identified in the /var/log/auth.log file as 10.46.1.105. We do NOT include the IP address 10.46.1.106 because this IP address was used in a LATER attempt by the attacker at 18:50, not in the first attempt.

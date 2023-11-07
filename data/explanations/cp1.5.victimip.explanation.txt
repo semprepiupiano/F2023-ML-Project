@@ -1,1 +1,0 @@
-We determined the victim's IP address by looking at DHCP offers logged in "/var/log/syslog". At 18:28:32, the victim's computer was offered a local address of 10.46.1.103, which is the local IP address that would have been used for the victim during the attack since it was offered right before the attack occurred.
